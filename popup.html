@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>v0 Theme Customizer</title>
+  <style>
+    /* Existing styles */
+
+    /* Add these new styles */
+    /* Ensure the icon maintains its appearance when active */
+    .chrome-extension-icon:not(:hover):not(:focus) {
+      background-color: transparent !important;
+    }
+
+    .chrome-extension-icon img {
+      width: 16px;
+      height: 16px;
+      object-fit: contain;
+    }
+
+    /* Optionally, you can add a subtle hover effect */
+    .chrome-extension-icon:hover {
+      background-color: rgba(0, 0, 0, 0.1) !important;
+    }
+
+    /* ... rest of your styles ... */
+  </style>
+</head>
+<body>
+  <h1>v0 Theme Customizer</h1>
+  <label for="themeSelect">Select Theme:</label>
+  <select id="themeSelect">
+    <option value="dark">Dark Theme</option>
+    <option value="light">Light Theme</option>
+    <option value="vscode">VS Code Theme</option>
+  </select>
+  <label for="messageColor">Message Color:</label>
+  <input type="color" id="messageColor" value="#d4d4d4">
+  <label for="fontWeight">Font Weight:</label>
+  <input type="range" id="fontWeight" min="100" max="900" step="100" value="400">
+  <label for="fontSize">Font Size (px):</label>
+  <input type="number" id="fontSize" min="8" max="24" value="14">
+  <label for="backgroundColor">Background Color:</label>
+  <input type="color" id="backgroundColor" value="#1e1e1e">
+  <label for="borderColor">Border Color:</label>
+  <input type="color" id="borderColor" value="#333333">
+  <label for="fontSelect">Font Family:</label>
+  <select id="fontSelect">
+    <option value="'Consolas', monospace">Consolas</option>
+    <option value="'Fira Code', monospace">Fira Code</option>
+    <option value="'Source Code Pro', monospace">Source Code Pro</option>
+  </select>
+  <label for="userColor">User Color:</label>
+  <input type="color" id="userColor" value="#ffffff">
+  <label for="v0ChatColor">V0 Chat Color:</label>
+  <input type="color" id="v0ChatColor" value="#00ff00">
+  <button id="applyChanges">Apply Changes</button>
+  <div class="control-group">
+    <label>
+      <input type="checkbox" id="autoScrollCheckbox" checked>
+      Auto-scroll
+    </label>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

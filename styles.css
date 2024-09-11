@@ -1,0 +1,112 @@
+:root {
+    --sent-message-color: #ffffff;
+    --received-message-color: #00ff00;
+    --font-weight: 400;
+    --font-size: 14px;
+    --font-family: 'Consolas', monospace;
+    --user-color: #ffffff;
+    --v0-chat-color: #00ff00;
+  }
+  
+  .v0-dark-mode {
+    --bg-color: #1e1e1e;
+    --sidebar-color: #252526;
+    --message-bg-color: #2d2d2d;
+  }
+  
+  .v0-light-mode {
+    --bg-color: #ffffff;
+    --sidebar-color: #f3f3f3;
+    --message-bg-color: #f9f9f9;
+  }
+  
+  .v0-vscode-mode {
+    --bg-color: #1e1e1e;
+    --sidebar-color: #252526;
+    --message-bg-color: #1e1e1e;
+  }
+  
+  body {
+    background-color: var(--bg-color) !important;
+  }
+  
+  /* Sidebar */
+  aside {
+    background-color: var(--sidebar-color) !important;
+  }
+  
+  /* Message box */
+  .flex.w-full.px-4.py-3 {
+    background-color: var(--message-bg-color) !important;
+  }
+  /* Ajuste para el encabezado de la aplicación */
+nav h1 {
+    color: #ffffff !important;
+  }
+  /* Estilo para el textarea de entrada del usuario */
+#chat-main-textarea {
+    color: var(--sent-message-color);
+    background-color: var(--message-bg-color);
+    border: 1px solid var(--sidebar-color);
+    resize: none;
+    overflow: auto;
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    outline: none;
+    transition: border-color 0.2s ease-in-out;
+  }
+  
+  #chat-main-textarea:focus {
+    border-color: var(--sent-message-color);
+  }
+  
+  /* Sent message text */
+  .prose p {
+    color: var(--user-color) !important;
+    font-weight: var(--font-weight) !important;
+    font-size: var(--font-size) !important;
+    font-family: var(--font-family) !important;
+  }
+  
+  /* Received message text */
+  .prose span {
+    color: var(--v0-chat-color) !important;
+    font-weight: var(--font-weight) !important;
+    font-size: var(--font-size) !important;
+    font-family: var(--font-family) !important;
+  }
+  
+  /* VS Code-like syntax highlighting */
+  .v0-vscode-mode .prose code {
+    color: #9cdcfe;
+  }
+  
+  .v0-vscode-mode .prose .keyword {
+    color: #569cd6;
+  }
+  
+  .v0-vscode-mode .prose .string {
+    color: #ce9178;
+  }
+  
+  .v0-vscode-mode .prose .comment {
+    color: #6a9955;
+  }
+  
+  /* Adjust other elements as needed */
+  .bg-white, .hover\:bg-gray-150, .focus\:bg-gray-150 {
+    background-color: var(--message-bg-color) !important;
+  }
+  
+  /* Ensure buttons and inputs are visible */
+  button, input, select {
+    background-color: var(--sidebar-color) !important;
+    color: var(--sent-message-color) !important;
+    border: 1px solid var(--sent-message-color) !important;
+  }
+  
+  .prose p, .prose span {
+    font-family: var(--font-family);
+  }
