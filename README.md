@@ -1,4 +1,4 @@
-# V0 Chat Styler
+# V0 Themes
 
 V0 Chat Styler is a browser extension that enhances the visual experience of your chat interface with customizable themes and styling options.
 
@@ -42,3 +42,23 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Inspired by popular code editor themes and chat applications
 - Built with love for developers and chat enthusiasts
+
+
+## Overview
+
+V0 Chat Styler is a browser extension that enhances the visual experience of chat interfaces with customizable themes and styling options. It offers three main themes: Dark mode, Light mode, and VS Code-inspired mode.
+
+## Files Structure
+
+- `manifest.json`: Extension configuration file
+- `popup.html`: HTML for the extension's popup interface
+- `popup.js`: JavaScript for popup functionality
+- `content.js`: Content script for applying styles to the chat interface
+- `styles.css`: Main CSS file containing all styling rules
+- `README.md`: Project overview and installation instructions
+
+## Styling (styles.css)
+
+### Root Variables
+
+The extension uses CSS variables for easy customization:
